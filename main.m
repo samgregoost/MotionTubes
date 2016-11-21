@@ -5,6 +5,7 @@ fileCount = size(k,1)
 
 for i= 1:fileCount
     nameLength = size(k(i).name,2)
+    try
     if nameLength > 3
         name = k(i).name;
         
@@ -15,5 +16,7 @@ for i= 1:fileCount
         name = name(1:end-8);
         name = strcat('../../MotionTubes/',name);
         save(name,'tubeCell');
+    end
+    catch
     end
 end
