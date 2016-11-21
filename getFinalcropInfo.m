@@ -2,7 +2,7 @@ function [ tubeInformation ] = getFinalcropInfo( Xi )
 %UNTITLED8 Summary of this function goes here
 %   Detailed explanation goes here
 [frameNum,columnCount] = size(unique(Xi(:,1:1)));
-
+Xi
 cellCount = 0;
 for i = 1:15:frameNum-30
  

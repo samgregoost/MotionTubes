@@ -26,12 +26,19 @@ for count = 1:cellNumber
             end
         end
      
-
+    startFrameNumber = tubeSegment(1,1);
+    endFrameNumber = tubeSegment(end,1);
+    
     
     [rowCount columnCount] = size(tubeSegment);
+    for jj = 1:startFrameNumber
+        currentFrame = step(videoReader);
+    end
+    
+    
     maxRad = max(tubeSegment);
     maxRad = floor(maxRad(1,4));
-    currentFrame = step(videoReader);
+    
     [height width] = size(currentFrame);
     
     
